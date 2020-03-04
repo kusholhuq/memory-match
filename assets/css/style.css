@@ -112,7 +112,17 @@ main .col-2 {
   transform: translateY(16vh);
   font-size: 200%;
 }
-
+.modal button {
+  height: 60px;
+  width: 120px;
+  position: relative;
+  top: 12rem;
+  border-radius: 5px;
+  border-top: 4px solid grey;
+  border-bottom: 4px solid grey;
+  border-left:1px solid grey;
+  border-right:1px solid grey;
+}
 .hidden {
   display: none;
 
