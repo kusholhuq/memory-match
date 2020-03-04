@@ -98,7 +98,20 @@ main .col-2 {
 .css-logo {
   background-image: url(../images/css-logo.png);
 }
+.modal {
+  position: fixed;
+  top: 25vh;
+  bottom: 25vh;
+  left: 75vh;
+  right: 75vh;
+  text-align: center;
 
+  background-color: lightskyblue;
+}
+.modal h3 {
+  transform: translateY(16vh);
+  font-size: 200%;
+}
 
 .hidden {
   display: none;
