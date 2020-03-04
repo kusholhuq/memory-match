@@ -96,3 +96,67 @@ function resetCards(){
 }
 
 document.querySelector("#modalButton").addEventListener("click", resetGame);
+
+//shuffle feature
+
+var shufflebutton = document.querySelector("#shuffleButton");
+shufflebutton.addEventListener("click", shuffle)
+
+var originalCardArray = [
+  "js-logo",
+  "docker-logo",
+  "gitHub-logo",
+  "html-logo",
+  "mysql-logo",
+  "node-logo",
+  "php-logo",
+  "react-logo",
+  "css-logo",
+  "js-logo",
+  "docker-logo",
+  "gitHub-logo",
+  "html-logo",
+  "mysql-logo",
+  "node-logo",
+  "php-logo",
+  "react-logo",
+  "css-logo"
+]
+
+function destroyChildren(element){
+ while (element.firstChild){
+   element.removeChild(element.firstChild);
+ }
+}
+
+function shuffle(){
+  destroyChildren(main);
+  var cardArrayCopy = [].concat(originalCardArray);
+  for(var k = 0; k<originalCardArray.length; k++){
+
+    var randomNumber = Math.floor(Math.random()*(cardArrayCopy.length));
+
+    var cardHolder = document.createElement("div");
+    cardHolder.classList.add("col-2");
+    cardHolder.classList.add("card");
+    var cardFront = document.createElement("div");
+    cardFront.classList.add("card-front");
+    cardFront.classList.add(cardArrayCopy[randomNumber]);
+    var cardBack = document.createElement("div");
+    cardBack.classList.add("card-back");
+
+    cardHolder.appendChild(cardFront);
+    cardHolder.appendChild(cardBack);
+    main.appendChild(cardHolder);
+
+    cardArrayCopy.splice(randomNumber, 1);
+
+
+  }
+  attempts = 0;
+  matches = 0;
+  gamesPlayed++;
+  displayStats();
+
+  document.querySelector(".modal").classList.add("hidden");
+}
