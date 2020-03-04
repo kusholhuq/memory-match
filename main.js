@@ -73,5 +73,26 @@ function displayStats(){
 }
 
 function calculateAccuracy(attempts, matches){
+  if(!attempts){
+    return "0%";
+  }
   return Math.trunc((matches/attempts)*100)+"%";
 }
+
+function resetGame(){
+  attempts = 0;
+  matches = 0;
+  gamesPlayed++;
+  displayStats();
+  resetCards();
+  document.querySelector(".modal").classList.add("hidden");
+}
+
+function resetCards(){
+  var hiddenCards = document.querySelectorAll(".card-back");
+  for(var i=0 ; i<hiddenCards.length ; i++){
+    hiddenCards[i].classList.remove("hidden");
+  }
+}
+
+document.querySelector("#modalButton").addEventListener("click", resetGame);
