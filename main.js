@@ -139,15 +139,19 @@ function shuffle(){
     var flipCard = document.createElement("div");
     flipCard.classList.add("flip-card");
 
+
     var cardHolder = document.createElement("div");
     cardHolder.classList.add("col-2");
     cardHolder.classList.add("card");
     cardHolder.classList.add("flip-card-inner");
+
     var cardFront = document.createElement("div");
     cardFront.classList.add("card-front");
     cardFront.classList.add(cardArrayCopy[randomNumber]);
+
     var cardBack = document.createElement("div");
     cardBack.classList.add("card-back");
+
 
     cardHolder.appendChild(cardFront);
     cardHolder.appendChild(cardBack);

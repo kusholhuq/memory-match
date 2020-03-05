@@ -1,14 +1,16 @@
 .container {
-  width: 80%;
+  width: 100%;
   max-width: 1500px;
   margin: auto;
   height: 100%;
+
 }
 
 .row {
   width: 100%;
   display: flex;
   margin-bottom: .5rem;
+  justify-content: space-evenly;
 }
 
 .col-1 {

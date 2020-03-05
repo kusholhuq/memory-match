@@ -1,7 +1,9 @@
 aside {
-  height: 90%;
-  font-family: "Monofett";
-  font-size: 150%;
+
+  height: 100%;
+  font-family: "Sigmar One";
+  font-size: 110%;
+  justify-content: space-evenly;
 }
 
 main {
@@ -9,6 +11,9 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 90%;
+
 }
 
 body {
@@ -34,20 +39,25 @@ header p {
 }
 
 .secondRow {
-  height: 85%;
+  height: 80%;
 }
 
 aside > div{
-  height: 13%;
-  margin:4%;
-  background-color: lightskyblue;
+  height: 9%;
+  margin-bottom:4%;
+  margin-right: 4%;
+  margin-left: 4%;
+  background-color: rgba(135,206,250,0.5);
   text-align: center;
   vertical-align: middle;
   border-radius: 10px;
+
 }
 
-aside > div > *{
-  transform: translateY(150%);
+aside > div  *{
+  position: relative;
+  top: 1vh;
+
 }
 
 .flip-card {
@@ -67,8 +77,8 @@ aside > div > *{
   transform-style: preserve-3d;
 }
 .card-front, .card-back {
-  height: 70%;
-  width: 90%;
+  height: 95%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -76,7 +86,8 @@ aside > div > *{
     -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 10px;
-  border: peachpuff solid 5px;
+
+
 }
 .card-front{
   transform: rotateY(180deg);
@@ -90,39 +101,40 @@ aside > div > *{
 
 
 .js-logo {
-  background-image: url(../images/js-logo.png);
+  background-image: url(../myImage/queens/asuna\ 3.jfif);
 }
 
 .docker-logo {
-  background-image: url(../images/docker-logo.jpg);
+  background-image: url(../myImage/queens/cowgiril.jfif);
+  background-position: 50% 10%; ;
 }
 
 .gitHub-logo {
-  background-image: url(../images/gitHub-logo.png);
+  background-image: url(../myImage/queens/ichigo.jfif);
 }
 
 .html-logo {
-  background-image: url(../images/html-logo.png);
+  background-image: url(../myImage/queens/kill.jfif);
 }
 
 .mysql-logo {
-  background-image: url(../images/mysql-logo.jpg);
+  background-image: url(../myImage/queens/koko.jfif);
 }
 
 .node-logo {
-  background-image: url(../images/node-logo.png);
+  background-image: url(../myImage/queens/kurisu.jfif);
 }
 
 .php-logo {
-  background-image: url(../images/php-logo.jpeg);
+  background-image: url(../myImage/queens/priess\ 3.jfif);
 }
 
 .react-logo {
-  background-image: url(../images/react-logo.png);
+  background-image: url(../myImage/queens/rem.jfif);
 }
 
 .css-logo {
-  background-image: url(../images/css-logo.png);
+  background-image: url(../myImage/queens/sorceress.jfif);
 }
 
 
@@ -151,6 +163,8 @@ aside > div > *{
   border-left:1px solid grey;
   border-right:1px solid grey;
 }
+
+
 .hidden {
   display: none;
 
