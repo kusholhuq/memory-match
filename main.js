@@ -21,8 +21,8 @@ function handleClick(event){
   if (event.target.className.indexOf("card-back") === -1) {
     return;
   }
-  var clicked = event.target;
-  clicked.classList.add("hidden");
+  var clicked = event.target.parentElement;
+  clicked.classList.add("card-revealed");
   if (!firstCardClicked){
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className;
@@ -49,14 +49,14 @@ function handleClick(event){
     else{
 
       setTimeout(function () {
-        firstCardClicked.classList.remove("hidden");
-        secondCardClicked.classList.remove("hidden");
+        firstCardClicked.parentElement.classList.remove("card-revealed");
+        secondCardClicked.parentElement.classList.remove("card-revealed");
         main.addEventListener("click", handleClick);
         firstCardClicked = null;
         secondCardClicked = null;
         attempts++;
         displayStats();
-      }, 1500);
+      }, 800);
 
     }
   }
@@ -95,12 +95,12 @@ function resetCards(){
   }
 }
 
-document.querySelector("#modalButton").addEventListener("click", resetGame);
+document.querySelector("#modalButton").addEventListener("click", shuffle);
 
 //shuffle feature
 
-var shufflebutton = document.querySelector("#shuffleButton");
-shufflebutton.addEventListener("click", shuffle)
+
+
 
 var originalCardArray = [
   "js-logo",
@@ -136,9 +136,13 @@ function shuffle(){
 
     var randomNumber = Math.floor(Math.random()*(cardArrayCopy.length));
 
+    var flipCard = document.createElement("div");
+    flipCard.classList.add("flip-card");
+
     var cardHolder = document.createElement("div");
     cardHolder.classList.add("col-2");
     cardHolder.classList.add("card");
+    cardHolder.classList.add("flip-card-inner");
     var cardFront = document.createElement("div");
     cardFront.classList.add("card-front");
     cardFront.classList.add(cardArrayCopy[randomNumber]);
@@ -147,7 +151,8 @@ function shuffle(){
 
     cardHolder.appendChild(cardFront);
     cardHolder.appendChild(cardBack);
-    main.appendChild(cardHolder);
+    flipCard.appendChild(cardHolder);
+    main.appendChild(flipCard);
 
     cardArrayCopy.splice(randomNumber, 1);
 
@@ -160,3 +165,5 @@ function shuffle(){
 
   document.querySelector(".modal").classList.add("hidden");
 }
+
+window.addEventListener('DOMContentLoaded', shuffle);
