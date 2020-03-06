@@ -167,7 +167,37 @@ function shuffle(){
   gamesPlayed++;
   displayStats();
 
-  //document.querySelector(".modal").classList.add("hidden");
+  document.querySelector(".modal").classList.add("hidden");
 }
 
 window.addEventListener('DOMContentLoaded', shuffle);
+
+
+//Sound stuff
+
+//make the sound object
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function () {
+    this.sound.play();
+  }
+  this.stop = function () {
+    this.sound.pause();
+  }
+}
+
+var matchSoundArray = [
+  "assets/sounds/combobreak-online-audio-converter_06FGwjv.mp3",
+  "assets/sounds/wow_17.mp3",
+  "assets/sounds/pig-stick-ft_FMMZeJh.mp3",
+  "assets/sounds/tuturu_1.mp3",
+  "assets/sounds/sugoi-sugoi.mp3"
+];
+var gameOverSound ="assets/sounds/tmph3o88c10.mp3";
+var kagebunshin = "assets/sounds/katon.mp3";
+var combo = "assets/sounds/anime-wow-sound-effect.mp3";

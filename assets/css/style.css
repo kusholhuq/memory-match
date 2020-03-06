@@ -1,7 +1,7 @@
 aside {
 
   height: 100%;
-  font-family: "Sigmar One";
+  font-family: "Press Start 2P","Sigmar One";
   font-size: 110%;
   justify-content: space-evenly;
 }
@@ -30,12 +30,12 @@ body {
 }
 
 header p {
-  font-family: "Modak";
-  font-size: 700%;
+  font-family: "Press Start 2P","Modak";
+  font-size: 500%;
   position: relative;
-  bottom: 8rem;
-  color: pink;
-  text-shadow: 10px 10px 20px #F46DA2;
+  bottom: 4rem;
+  color: hotpink;
+  text-shadow: 10px 10px 20px lightsalmon;
 }
 
 .secondRow {
@@ -155,18 +155,8 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.4);
   text-align: center;
    background-color: rgba(0,0,0,0.4);
 }
-.modal h3 {
 
-  font-size: 200%;
-}
-.modal button {
-  font-family:  "Press Start 2P";;
-  height: 60px;
-  width: 120px;
-  position: relative;
-  right: 8rem;
-  background-color: transparent;
-}
+
 
 .modalContent {
  /*background-color:rgba(255,255,255, 0.7);*/
@@ -175,15 +165,28 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.4);
  background-repeat: no-repeat;
  background-position: center;
  height: 20rem;
-  margin: 8% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+margin: 8% auto; /* 15% from the top and centered */
+padding: 20px;
+border: 1px solid #888;
+width: 38%; /* Could be more or less, depending on screen size */
+border-radius: 20px;
 }
-.modal p{
-  font-family: "Press Start 2P";
+.modalContent div {
+  font-family:  "Press Start 2P";
+  height: 60px;
+  width: 120px;
+  position: relative;
+  left:19%;
+  background-color: transparent;
+  line-height: 120%;
 }
-
+.modalContent span{
+  transition: text-shadow 0.5 ease-in-out;
+}
+.modalContent span:hover{
+  text-shadow: 2px 2px pink;
+  cursor: pointer;
+}
 
 .hidden {
   display: none;
