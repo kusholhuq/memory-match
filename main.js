@@ -167,7 +167,7 @@ function shuffle(){
   gamesPlayed++;
   displayStats();
 
-  document.querySelector(".modal").classList.add("hidden");
+  //document.querySelector(".modal").classList.add("hidden");
 }
 
 window.addEventListener('DOMContentLoaded', shuffle);

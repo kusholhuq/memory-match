@@ -148,29 +148,41 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 
 .modal {
   position: fixed;
-  top: 25vh;
-  bottom: 25vh;
-  left: 75vh;
-  right: 75vh;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   text-align: center;
-  background-color: lightskyblue;
+   background-color: rgba(0,0,0,0.4);
 }
 .modal h3 {
-  transform: translateY(16vh);
+
   font-size: 200%;
 }
 .modal button {
+  font-family:  "Press Start 2P";;
   height: 60px;
   width: 120px;
   position: relative;
-  top: 12rem;
-  border-radius: 5px;
-  border-top: 4px solid grey;
-  border-bottom: 4px solid grey;
-  border-left:1px solid grey;
-  border-right:1px solid grey;
+  right: 8rem;
+  background-color: transparent;
 }
 
+.modalContent {
+ /*background-color:rgba(255,255,255, 0.7);*/
+ background-image: url(../myImage/queens/the\ bomb.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 20rem;
+  margin: 8% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.modal p{
+  font-family: "Press Start 2P";
+}
 
 
 .hidden {
