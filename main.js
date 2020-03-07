@@ -41,6 +41,7 @@ function handleClick(event){
       matches++;
       attempts++;
       displayStats();
+      matchSound();
       if(matches===maxMatches){
         var modal = document.querySelector(".modal");
         modal.classList.remove("hidden");
@@ -201,3 +202,10 @@ var matchSoundArray = [
 var gameOverSound ="assets/sounds/tmph3o88c10.mp3";
 var kagebunshin = "assets/sounds/katon.mp3";
 var combo = "assets/sounds/anime-wow-sound-effect.mp3";
+
+
+function matchSound(){
+  var luckyNumber = Math.floor(Math.random() * (matchSoundArray.length));
+  mySound = new sound(matchSoundArray[luckyNumber]);
+  mySound.play();
+}
