@@ -209,3 +209,17 @@ function matchSound(){
   mySound = new sound(matchSoundArray[luckyNumber]);
   mySound.play();
 }
+
+
+//timer stuff
+
+var timerCounter = 60;
+var myInterval = setInterval(innerTimer, 1000);
+function innerTimer (){
+  document.getElementById("timer").textContent=--timerCounter;
+  if(timerCounter<=0){
+    clearInterval(myInterval);
+  }
+
+
+}
