@@ -107,41 +107,49 @@ transform: scale(1.2, 1.2);
 box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 
 }
-.js-logo {
-  background-image: url(../myImage/queens/asuna\ 3.jfif);
+.asuna {
+  background-image: url(../myImage/queens/asuna\ sword.png);
+  background-size: 200%;
+  background-position: 70% 50%;
 }
 
-.docker-logo {
-  background-image: url(../myImage/queens/cowgiril.jfif);
-  background-position: 50% 10%; ;
+.cowgirl {
+  background-image: url(../myImage/queens/cowgirl\ 2.jfif);
+  background-position: 50% 10%;
 }
 
-.gitHub-logo {
+.ichigo {
   background-image: url(../myImage/queens/ichigo.jfif);
 }
 
-.html-logo {
+.kill {
   background-image: url(../myImage/queens/kill.jfif);
+  background-size: 150%;
+  background-position: 0% 0%;
 }
 
-.mysql-logo {
+.koko {
   background-image: url(../myImage/queens/koko.jfif);
 }
 
-.node-logo {
+.kurisu {
   background-image: url(../myImage/queens/kurisu.jfif);
 }
 
-.php-logo {
+.priestess {
   background-image: url(../myImage/queens/priess\ 3.jfif);
+  background-position: 50% 15%;
 }
 
-.react-logo {
+.rem {
   background-image: url(../myImage/queens/rem.jfif);
+  background-size: 120%;
 }
 
-.css-logo {
+.sorceress {
   background-image: url(../myImage/queens/sorceress.jfif);
+  background-size: 130%;
+  background-position: 50% 10%;
 }
 
 

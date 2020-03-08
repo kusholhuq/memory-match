@@ -105,34 +105,31 @@ document.querySelector("#modalButton").addEventListener("click", shuffle);
 
 //shuffle feature
 
-
-
-
 var originalCardArray = [
-  "js-logo",
-  "docker-logo",
-  "gitHub-logo",
-  "html-logo",
-  "mysql-logo",
-  "node-logo",
-  "php-logo",
-  "react-logo",
-  "css-logo",
-  "js-logo",
-  "docker-logo",
-  "gitHub-logo",
-  "html-logo",
-  "mysql-logo",
-  "node-logo",
-  "php-logo",
-  "react-logo",
-  "css-logo"
+  "asuna",
+  "cowgirl",
+  "ichigo",
+  "kill",
+  "koko",
+  "kurisu",
+  "priestess",
+  "rem",
+  "sorceress",
+  "asuna",
+  "cowgirl",
+  "ichigo",
+  "kill",
+  "koko",
+  "kurisu",
+  "priestess",
+  "rem",
+  "sorceress"
 ]
 
 function destroyChildren(element){
- while (element.firstChild){
-   element.removeChild(element.firstChild);
- }
+while (element.firstChild){
+  element.removeChild(element.firstChild);
+}
 }
 
 function shuffle(){
