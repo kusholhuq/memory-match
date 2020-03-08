@@ -1,5 +1,6 @@
 
-
+var timerCounter = 60;
+var myInterval = setInterval(innerTimer, 1000);
 
 
 var main = document.getElementById("gameCards");
@@ -45,6 +46,10 @@ function handleClick(event){
       if(matches===maxMatches){
         var modal = document.querySelector(".modal");
         modal.classList.remove("hidden");
+        clearInterval(myInterval);
+        document.getElementById("timer").textContent = 60;
+        mySound = new sound("assets/sounds/anime-wow-sound-effect.mp3");
+        mySound.play();
       }
     }
     else{
@@ -132,6 +137,7 @@ function destroyChildren(element){
 
 function shuffle(){
   destroyChildren(main);
+
   var cardArrayCopy = [].concat(originalCardArray);
   for(var k = 0; k<originalCardArray.length; k++){
 
@@ -169,6 +175,7 @@ function shuffle(){
   displayStats();
 
   document.querySelector(".modal").classList.add("hidden");
+  document.getElementById("gameOver").classList.add("hidden");
 }
 
 window.addEventListener('DOMContentLoaded', shuffle);
@@ -213,13 +220,21 @@ function matchSound(){
 
 //timer stuff
 
-var timerCounter = 60;
-var myInterval = setInterval(innerTimer, 1000);
+
 function innerTimer (){
   document.getElementById("timer").textContent=--timerCounter;
   if(timerCounter<=0){
+    document.getElementById("gameOver").classList.remove("hidden");
     clearInterval(myInterval);
+    document.getElementById("timer").textContent = 60;
+    mySound = new sound("assets/sounds/tmph3o88c10.mp3");
+    mySound.play();
   }
-
-
 }
+function resetTimer(){
+  timerCounter = 60;
+  myInterval = setInterval(innerTimer, 1000);
+}
+document.getElementById("gameOverButton").addEventListener("click",shuffle);
+document.getElementById("gameOverButton").addEventListener("click", resetTimer);
+document.getElementById("modalButton").addEventListener("click", resetTimer);

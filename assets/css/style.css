@@ -153,40 +153,99 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.4);
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   text-align: center;
-   background-color: rgba(0,0,0,0.4);
+   background-color: rgba(255,192,203,.8);
 }
 
 
 
 .modalContent {
  /*background-color:rgba(255,255,255, 0.7);*/
- background-image: url(../myImage/queens/the\ bomb.png);
+ background-image: url(../myQueens/WinScreen.png);
  background-size: contain;
  background-repeat: no-repeat;
- background-position: center;
- height: 20rem;
-margin: 8% auto; /* 15% from the top and centered */
+ background-position-x: 35%;
+ height: 100%;
+margin: 0 auto; /* 15% from the top and centered */
 padding: 20px;
 border: 1px solid #888;
-width: 38%; /* Could be more or less, depending on screen size */
+width: 100%; /* Could be more or less, depending on screen size */
 border-radius: 20px;
 }
 .modalContent div {
   font-family:  "Press Start 2P";
   height: 60px;
-  width: 120px;
+  width: 200px;
   position: relative;
-  left:19%;
+  top: 30%;
+  left:28%;
   background-color: transparent;
-  line-height: 120%;
+  line-height: 140%;
+  font-size: 1.25rem;
 }
 .modalContent span{
-  transition: text-shadow 0.5 ease-in-out;
+  display: inline-block;
+  transition: all 0.5 ease-in-out;
+  text-shadow: 2px 2px hotpink;
+  transition: transform 0.5 ease-in-out;
 }
 .modalContent span:hover{
-  text-shadow: 2px 2px pink;
+
+  text-shadow: 2px 2px lightseagreen;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.gameOverBack{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  text-align: center;
+   /*background-image: url(../myQueens/gameblack2.jpg);*/
+   background-size: cover;
+   /*opacity: .9;*/
+   background-color: rgba(0,0,0,.9);
+}
+.gameOverContent{
+  position: relative;
+  left: 24%;
+  top: 19%;
+  width: 80%;
+  height: 80%;
+  background-image: url(../myQueens/maybeMaster.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.gameOverContent span{
+  font-family: "Press Start 2P";
+  font-size: 4rem;
+  position: relative;
+  right: 17%;
+  top: 5%;
+  text-shadow: 0px 0px 5px hotpink;
+}
+.gameOverContent p{
+  font-family: "Press Start 2P";
+  font-size: 2rem;
+  position: relative;
+  right: 17%;
+  top: 5%;
+  text-shadow: 0px 0px 5px hotpink;
+  transition: all 0.3s ease-in-out;
+}
+.gameOverContent p:hover{
+  transform: scale(1.1);
+  text-shadow: 0px 0px 15px lightseagreen;
   cursor: pointer;
 }
+
+
+
+
+
 
 .hidden {
   display: none;
