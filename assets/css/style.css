@@ -63,7 +63,6 @@ aside > div  *{
 .flip-card {
   background-color: transparent;
   height: 33%;
-
   perspective: 1000px;
   flex-basis: 13%;
   margin: 1%;
@@ -250,12 +249,126 @@ border-radius: 20px;
   cursor: pointer;
 }
 
-
-
-
-
-
 .hidden {
   display: none;
 
 }
+
+/*media queries
+ipad */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 766px)
+  and (max-device-width: 1028px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    html, body { overflow: hidden; }
+    main#gameCards {
+      width: 90%;
+      position: relative;
+      right: 8%;
+      bottom: 5%;
+    }
+
+
+    .flip-card{
+      flex-basis: 25%;
+      height: 18%;
+      margin: 5px;
+    }
+    .topRow.row {
+      height: 10%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    header p {
+      font-family: "Press Start 2P","Modak";
+      font-size: 250%;
+      position: relative;
+      bottom: 10%;
+      right:10%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+}
+    aside.col-2 {
+      position: absolute;
+      font-size: 80%;
+      justify-content: space-evenly;
+      width:100%;
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      height: 7%;
+      top: 90%;
+
+    }
+    aside.col-2 > div{
+      flex-basis: 0;
+      height: 80%;
+      background-color: rgba(135,206,250,0.5);
+      margin: 0;
+      border-radius: 10px;
+      margin: 1% 1%;
+}
+    aside.col-2 > div  *{
+      margin-top: 1%;
+      vertical-align: middle;
+}
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+.topRow {
+  height: 10%;
+  justify-content: center;
+}
+header p {
+  font-size: 250%;
+  bottom: 30%;
+  right: 10%;
+}
+aside.col-2 {
+  position: relative;
+  height: 100%;
+  font-size: 70%;
+  width:12%;
+  right: 5%;
+}
+aside > div{
+  margin-bottom:4%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+main.col-10 {
+  position: relative;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 90%;
+  right: 9%;
+}
+.flip-card {
+  background-color: transparent;
+  height: 33%;
+  perspective: 1000px;
+  flex-basis: 13%;
+  margin: 1%;
+}
+  }
