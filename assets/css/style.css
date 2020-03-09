@@ -1,5 +1,9 @@
 aside {
+
   height: 100%;
+  font-family: "Press Start 2P","Sigmar One";
+  font-size: 110%;
+  justify-content: space-evenly;
 }
 
 main {
@@ -7,12 +11,17 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 90%;
+
 }
 
 body {
   height: 97vh;
-  background-image: url("../images/lfz-background.jpg");
+  background-image: url(../myImage/8.png);
   background-size: cover;
+
+
 }
 
 .topRow {
@@ -20,112 +29,232 @@ body {
   justify-content: center;
 }
 
-h1 {
-  font-size: 350%;
+header p {
+  font-family: "Press Start 2P","Modak";
+  font-size: 500%;
+  position: relative;
+  bottom: 4rem;
+  color: hotpink;
+  text-shadow: 10px 10px 20px lightsalmon;
 }
 
 .secondRow {
-  height: 85%;
+  height: 80%;
 }
 
 aside > div{
-  height: 13%;
-  margin:4%;
-  background-color: lightskyblue;
+  height: 9%;
+  margin-bottom:4%;
+  margin-right: 4%;
+  margin-left: 4%;
+  background-color: rgba(135,206,250,0.5);
   text-align: center;
   vertical-align: middle;
+  border-radius: 10px;
+
 }
 
-aside > div > *{
-  transform: translateY(150%);
-}
-
-main .row {
-  height: 33%;
-  margin-top:2%;
-}
-
-main .col-2 {
-  /*background-image: url("../images/lfz-card.jpg");
-  background-size: cover;*/
-  margin: 2% 3px;
+aside > div  *{
   position: relative;
-  /*background-position: center;*/
+  top: 1vh;
+
 }
 
-.card-front, .card-back {
+.flip-card {
+  background-color: transparent;
+  height: 33%;
+
+  perspective: 1000px;
+  flex-basis: 13%;
+  margin: 1%;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
   height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-front, .card-back {
+  height: 95%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-
+    -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
+.card-front{
+  transform: rotateY(180deg);
+}
+.card-revealed{
+  transform: rotateY(180deg);
+}
 .card-back {
-  background-image: url(../images/lfz-card.jpg);
+  background-image: url(../myImage/cherry-blossomswatercolor-canvas.png);
 }
-.js-logo {
-  background-image: url(../images/js-logo.png);
+.card-back:hover{
+box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+transform: scale(1.2, 1.2);
+}
+.card-front:hover{
+box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+
+}
+.asuna {
+  background-image: url(../myImage/queens/asuna\ sword.png);
+  background-size: 200%;
+  background-position: 70% 50%;
 }
 
-.docker-logo {
-  background-image: url(../images/docker-logo.jpg);
+.cowgirl {
+  background-image: url(../myImage/queens/cowgirl\ 2.jfif);
+  background-position: 50% 10%;
 }
 
-.gitHub-logo {
-  background-image: url(../images/gitHub-logo.png);
+.ichigo {
+  background-image: url(../myImage/queens/ichigo.jfif);
 }
 
-.html-logo {
-  background-image: url(../images/html-logo.png);
+.kill {
+  background-image: url(../myImage/queens/kill.jfif);
+  background-size: 150%;
+  background-position: 0% 0%;
 }
 
-.mysql-logo {
-  background-image: url(../images/mysql-logo.jpg);
+.koko {
+  background-image: url(../myImage/queens/koko.jfif);
 }
 
-.node-logo {
-  background-image: url(../images/node-logo.png);
+.kurisu {
+  background-image: url(../myImage/queens/kurisu.jfif);
 }
 
-.php-logo {
-  background-image: url(../images/php-logo.jpeg);
+.priestess {
+  background-image: url(../myImage/queens/priess\ 3.jfif);
+  background-position: 50% 15%;
 }
 
-.react-logo {
-  background-image: url(../images/react-logo.png);
+.rem {
+  background-image: url(../myImage/queens/rem.jfif);
+  background-size: 120%;
 }
 
-.css-logo {
-  background-image: url(../images/css-logo.png);
+.sorceress {
+  background-image: url(../myImage/queens/sorceress.jfif);
+  background-size: 130%;
+  background-position: 50% 10%;
 }
+
+
+
 .modal {
   position: fixed;
-  top: 25vh;
-  bottom: 25vh;
-  left: 75vh;
-  right: 75vh;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   text-align: center;
+   background-color: rgba(255,192,203,.8);
+}
 
-  background-color: lightskyblue;
+
+
+.modalContent {
+ /*background-color:rgba(255,255,255, 0.7);*/
+ background-image: url(../myQueens/WinScreen.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position-x: 35%;
+ height: 100%;
+margin: 0 auto; /* 15% from the top and centered */
+padding: 20px;
+border: 1px solid #888;
+width: 100%; /* Could be more or less, depending on screen size */
+border-radius: 20px;
 }
-.modal h3 {
-  transform: translateY(16vh);
-  font-size: 200%;
-}
-.modal button {
+.modalContent div {
+  font-family:  "Press Start 2P";
   height: 60px;
-  width: 120px;
+  width: 200px;
   position: relative;
-  top: 12rem;
-  border-radius: 5px;
-  border-top: 4px solid grey;
-  border-bottom: 4px solid grey;
-  border-left:1px solid grey;
-  border-right:1px solid grey;
+  top: 30%;
+  left:28%;
+  background-color: transparent;
+  line-height: 140%;
+  font-size: 1.25rem;
 }
+.modalContent span{
+  display: inline-block;
+  transition: all 0.5 ease-in-out;
+  text-shadow: 2px 2px hotpink;
+  transition: transform 0.5 ease-in-out;
+}
+.modalContent span:hover{
+
+  text-shadow: 2px 2px lightseagreen;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.gameOverBack{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  text-align: center;
+   /*background-image: url(../myQueens/gameblack2.jpg);*/
+   background-size: cover;
+   /*opacity: .9;*/
+   background-color: rgba(0,0,0,.9);
+}
+.gameOverContent{
+  position: relative;
+  left: 24%;
+  top: 19%;
+  width: 80%;
+  height: 80%;
+  background-image: url(../myQueens/maybeMaster.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.gameOverContent span{
+  font-family: "Press Start 2P";
+  font-size: 4rem;
+  position: relative;
+  right: 17%;
+  top: 5%;
+  text-shadow: 0px 0px 5px hotpink;
+}
+.gameOverContent p{
+  font-family: "Press Start 2P";
+  font-size: 2rem;
+  position: relative;
+  right: 17%;
+  top: 5%;
+  text-shadow: 0px 0px 5px hotpink;
+  transition: all 0.3s ease-in-out;
+}
+.gameOverContent p:hover{
+  transform: scale(1.1);
+  text-shadow: 0px 0px 15px lightseagreen;
+  cursor: pointer;
+}
+
+
+
+
+
+
 .hidden {
   display: none;
 
