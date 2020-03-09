@@ -47,7 +47,7 @@ function handleClick(event){
         var modal = document.querySelector(".modal");
         modal.classList.remove("hidden");
         clearInterval(myInterval);
-        document.getElementById("timer").textContent = 60;
+        //document.getElementById("timer").textContent = 60;
         mySound = new sound("assets/sounds/anime-wow-sound-effect.mp3");
         mySound.play();
       }
