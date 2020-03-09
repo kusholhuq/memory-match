@@ -78,5 +78,13 @@ ipad */
   and (max-device-width: 1024px)
   and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 1) {
+    .container{
+      max-width:1024px;
+      max-height: 768px;
+    }
+    .secondRow.row{
+      max-width: 1024px;
+      width:1000px;
+    }
 
 }
