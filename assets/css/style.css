@@ -174,7 +174,7 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.4);
  height: 100%;
 margin: 0 auto; /* 15% from the top and centered */
 padding: 20px;
-border: 1px solid #888;
+
 width: 100%; /* Could be more or less, depending on screen size */
 border-radius: 20px;
 }
@@ -341,29 +341,32 @@ body > * {
 header p {
   font-size: 250%;
   bottom: 30%;
-  right: 10%;
+  right: 0;
 }
 aside.col-2 {
   position: relative;
   height: 100%;
   font-size: 70%;
-  width:12%;
-  right: 5%;
+  width:15%;
+  right: 0;
 }
 aside > div{
   margin-bottom:4%;
   margin-right: 2%;
   margin-left: 2%;
 }
+aside > div *{
+  position: relative;
+  top: 35%;
+}
 
 main.col-10 {
   position: relative;
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   height: 90%;
-  right: 9%;
 }
 .flip-card {
   background-color: transparent;
@@ -374,8 +377,8 @@ main.col-10 {
 }
 .gameOverContent{
   position: relative;
-  left: 3%;
-  top: 6%;
+  left: 10%;
+  top: 20%;
   width: 80%;
   height: 80%;
   background-image: url(../myQueens/maybeMaster.png);
@@ -387,17 +390,63 @@ main.col-10 {
 .gameOverContent span{
   right: 0%;
   top: 5%;
+
 }
 .gameOverContent p{
   right: 0%;
   top: 5%;
-  text-shadow: 0px 0px 5px hotpink;
+  text-shadow: 0px 0px 5px lightseagreen;
   transition: all 0.3s ease-in-out;
 }
 .gameOverContent p:hover{
   transform: scale(1.1);
   text-shadow: 0px 0px 15px lightseagreen;
   cursor: pointer;
+}
+.secondRow {
+  height: 90%;
+}
+
+.rem {
+  background-size: 180%;
+  background-position-y: -10px;
+}
+
+.kill {
+
+  background-size: 175%;
+  background-position: 0% 0%;
+}
+
+.sorceress {
+
+  background-size: 210%;
+  background-position: 50% -5%;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  text-align: center;
+   background-color: rgba(255,192,203,.8);
+}
+
+
+
+.modalContent {
+position: relative;
+right: 5%;
+
+
+}
+.modalContent div {
+
+  position: relative;
+  top: 30%;
+  left:25%;
 }
 
 .hidden {
