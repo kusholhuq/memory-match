@@ -63,7 +63,6 @@ aside > div  *{
 .flip-card {
   background-color: transparent;
   height: 33%;
-
   perspective: 1000px;
   flex-basis: 13%;
   margin: 1%;
@@ -175,7 +174,7 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.4);
  height: 100%;
 margin: 0 auto; /* 15% from the top and centered */
 padding: 20px;
-border: 1px solid #888;
+
 width: 100%; /* Could be more or less, depending on screen size */
 border-radius: 20px;
 }
@@ -210,10 +209,8 @@ border-radius: 20px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   text-align: center;
-   /*background-image: url(../myQueens/gameblack2.jpg);*/
-   background-size: cover;
-   /*opacity: .9;*/
-   background-color: rgba(0,0,0,.9);
+  background-size: cover;
+  background-color: rgba(0,0,0,.9);
 }
 .gameOverContent{
   position: relative;
@@ -250,12 +247,242 @@ border-radius: 20px;
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+
+}
+
+/*media queries
+ipad */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+body > * {
+  overflow: hidden;
+}
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 766px)
+  and (max-device-width: 1028px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    html, body { overflow: hidden; }
+    main#gameCards {
+      width: 90%;
+      position: relative;
+      bottom: 5%;
+    }
+
+
+    .flip-card{
+      flex-basis: 25%;
+      height: 18%;
+      margin: 5px;
+    }
+    .topRow.row {
+      height: 10%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    header p {
+      font-family: "Press Start 2P","Modak";
+      font-size: 250%;
+      position: relative;
+      bottom: 10%;
+      right:0%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+}
+    aside.col-2 {
+      position: absolute;
+      font-size: 79%;
+      justify-content: space-evenly;
+      width:100%;
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      height: 7%;
+      top: 90%;
+
+    }
+    aside.col-2 > div{
+      position: relative;
+      flex-basis: 0;
+      height: 80%;
+      background-color: rgba(135,206,250,0.5);
+      margin: 0;
+      border-radius: 10px;
+      margin: 1% 1%;
+      left: 0%;
+      padding-left:1%;
+      padding-right:1%;
+}
+    aside.col-2 > div  *{
+      margin-top: 1%;
+      vertical-align: middle;
+}
+.gameOverBack{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  text-align: center;
+  background-size: cover;
+  background-color: rgba(0,0,0,.9);
+}
+.gameOverContent{
+
+  left: -20%;
+  top: 20%;
+  width: 150%;
+  height: 80%;
+}
+
+.gameOverContent span{
+  left: -3%;
+  font-size:5rem;
+}
+.gameOverContent p{
+  font-size: 2.5rem;
+  left:-4%;
+  top: 5%;
+  text-shadow: 0px 0px 5px lightseagreen;
+
+}
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+.topRow {
+  height: 10%;
+  justify-content: center;
+}
+header p {
+  font-size: 250%;
+  bottom: 30%;
+  right: 0;
+}
+aside.col-2 {
+  position: relative;
+  height: 100%;
+  font-size: 70%;
+  width:15%;
+  right: 0;
+}
+aside > div{
+  margin-bottom:4%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+aside > div *{
+  position: relative;
+  top: 35%;
+}
+
+main.col-10 {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 90%;
+}
+.flip-card {
+  background-color: transparent;
+  height: 33%;
+  perspective: 1000px;
+  flex-basis: 13%;
+  margin: 1%;
+}
+.gameOverContent{
+  position: relative;
+  left: 10%;
+  top: 20%;
+  width: 80%;
+  height: 80%;
+  background-image: url(../myQueens/maybeMaster.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.gameOverContent span{
+  right: 0%;
+  top: 5%;
+
+}
+.gameOverContent p{
+  right: 0%;
+  top: 5%;
+  text-shadow: 0px 0px 5px lightseagreen;
+  transition: all 0.3s ease-in-out;
+}
+.gameOverContent p:hover{
+  transform: scale(1.1);
+  text-shadow: 0px 0px 15px lightseagreen;
+  cursor: pointer;
+}
+.secondRow {
+  height: 90%;
+}
+
+.rem {
+  background-size: 180%;
+  background-position-y: 5px;
+}
+
+.kill {
+
+  background-size: 175%;
+  background-position: 0% 0%;
+}
+
+.sorceress {
+
+  background-size: 210%;
+  background-position: 50% -5%;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  text-align: center;
+   background-color: rgba(255,192,203,.8);
+}
 
 
 
+.modalContent {
+position: relative;
+right: 5%;
 
+
+}
+.modalContent div {
+
+  position: relative;
+  top: 30%;
+  left:25%;
+}
 
 .hidden {
   display: none;
 
 }
+  }
