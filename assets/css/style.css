@@ -357,6 +357,17 @@ body > * {
 
 }
 
+.modalContent{
+  position: relative;
+  top: 19.5rem;
+  right: 2rem;
+  transform: scale(1.25);
+}
+.modalContent .modalText{
+  position: relative;
+  top: 11rem;
+  left: 10.5rem;
+}
 }
 
 /* Landscape */
@@ -481,8 +492,165 @@ right: 5%;
   left:25%;
 }
 
+
+  }
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 370px)
+  and (max-device-width: 670px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 370px)
+  and (max-device-width: 670px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+.container{
+  max-width: 375px;
+  max-height: 667px;
+}
+header p {
+
+  font-size: 1.6rem;
+  position: relative;
+  bottom: 1.5rem;
+  text-align: center;
+
+}
+ aside  {
+   position: absolute;
+   font-size: .5rem;
+   display: flex;
+   top: 101%;
+   height: 3rem;
+
+ }
+
+ .row.secondRow{
+   position: relative;
+   bottom: 4%;
+ }
+ main.col-10{
+  width: 100%;
+  position: relative;
+  bottom: 8%;
+ }
+ .flip-card{
+      flex-basis: 30%;
+      height: 18%;
+      margin: 5px;
+    }
+aside.col-2 div{
+  height: 100%;
+
+
+}
+aside.col-2 p{
+  position: relative;
+  top: .5rem;
+}
+.gameOverContent{
+  left: 6%;
+  height: 50%;
+  top: 53%;
+  transform:scale(2);
+}
+.gameOverContent span{
+  font-size: 1.20rem;
+  left: 3.5%;
+  bottom: 5%;
+}
+.gameOverContent p{
+  font-size: .6rem;
+  left:2%;
+  top: 5%;
+  text-shadow: 0 0 4px lightseagreen;
+
+}
+
+.modalContent{
+  transform: scale(1.4);
+  position: relative;
+  top:20.1rem;
+  right: 0rem;
+}
+.modalContent .modalText{
+ top: 5rem;
+ left: 3rem;
+ font-size: .7rem;
+ width: 160px;
+}
+.modalContent .modalText span{
+
+}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 370px)
+  and (max-device-width: 670px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+html{
+  max-width: 667px;
+  max-height: 375px;
+  margin: 0;
+}
+header p{
+font-size: 2rem;
+bottom: 1.5rem;;
+}
+aside{
+  font-size: .5rem;
+}
+.row.secondRow{
+  margin-bottom: 0;
+}
+.gameOverContent{
+  position: relative;
+  transform: scale(1.25);
+  top: 10%;
+}
+.gameOverContent span{
+  font-size: 2rem;
+  left: -13%;
+  top: 1rem;
+}
+.gameOverContent p{
+  font-size: 1rem;
+  left: -14%;
+  text-shadow: 0 0 5px lightseagreen;
+}
+.sorceress {
+
+  background-size: 150%;
+  background-position: 50% -5%;
+}
+aside p{
+  position: relative;
+  top: 10px;
+}
+.modalContent{
+  transform: scale(1.4);
+  position: relative;
+  bottom: 2rem;
+
+}
+.modalContent .modalText{
+  font-size: .8rem;
+  left: 7.8rem;
+
+}
+.modalContent .modalText span{
+
+}
+}
 .hidden {
   display: none;
 
 }
-  }
